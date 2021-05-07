@@ -1,0 +1,78 @@
+/* SCSS TEMPLATE FOR INTERNAL MAGENTO MODULES
+* Made by: @bodeby (github)
+* Compiled with: sass --watch <name>.scss:<name>.css --style compressed
+* Media breakpoints: https://devfacts.com/media-queries-breakpoints-2021/ 
+*/
+
+@use 'reset';
+@use 'vars';
+@use 'helpers';
+
+// Mobile first-design
+.module-bundle {
+  // Wrapper
+  font-family: "Open Sans", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: vars.$lg-dist;
+}
+
+// Small - Devices < 576px
+@media screen and (min-width: vars.$media-sm) {
+  .module-bundle {
+  }
+}
+
+// Medium - Devices < 768px
+@media screen and (min-width: vars.$media-md) {
+  .module-bundle {
+    .row-top {
+      display: grid;
+      grid-template-columns: 1fr minmax(60%, 1fr);
+      grid-template-rows: 1fr 1fr;
+      column-gap: 1.8rem;
+
+      h3,
+      strong {
+        color: vars.$bluecity-blue;
+      }
+
+      .left-pane {
+        padding: vars.$lg-dist;
+        background-color: vars.$whitesmoke;
+      }
+
+      .btn-list {
+        .btn {
+          display: block;
+          text-decoration: none;
+          padding: 0.6rem;
+          margin-top: 0.3rem;
+          border-radius: 0.25rem;
+        }
+
+        .btn-bluecity {
+          background-color: vars.$bluecity-blue;
+          color: vars.$white-text;
+        }
+
+        .btn-bluecity:hover {
+          background-color: vars.$bluecity-blue-dark;
+        }
+      }
+    }
+  }
+}
+
+// Large - Devices < 992px
+@media screen and (min-width: vars.$media-lg) {
+  .module-bundle {
+  }
+}
+
+// Extra-Large - Devices < 1200px;
+@media screen and (min-width: vars.$media-xl) {
+  .module-bundle {
+    max-width: 1280px;
+  }
+}
