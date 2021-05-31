@@ -14,11 +14,16 @@
   font-family: "Open Sans", sans-serif;
   margin-left: auto;
   margin-right: auto;
-  margin-top: vars.$lg-dist;
+
+  //margin-top: vars.$lg-dist;
 
   .row-top {
     display: flex;
     flex-direction: column-reverse;
+
+    p {
+      font-size: 14px;
+    }
 
     h3,
     strong {
@@ -29,13 +34,12 @@
       display: block;
       padding: vars.$lg-dist;
       background-color: vars.$whitesmoke;
-      box-shadow: vars.$block-shadow-sm;
     }
 
     .right-pane {
       display: block;
-      box-shadow: vars.$block-shadow-sm;
-      margin-bottom: vars.$sm-dist * 2 !important;
+
+      margin-bottom: vars.$sm-dist * 0.5 !important;
 
       img {
         max-width: 100%;
@@ -51,8 +55,14 @@
         border-radius: 0.25rem;
         padding-left: 1.2rem !important;
 
-        .btn-icon {
+        .btn-inner {
           margin-right: 0.3rem;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 0.6rem;
+          }
         }
       }
 
@@ -71,6 +81,8 @@
 // Small - Devices < 576px
 @media screen and (min-width: vars.$media-sm) {
   .module-bundle {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -80,54 +92,22 @@
     .row-top {
       display: grid;
       grid-template-columns: 1fr minmax(60%, 1fr);
-      grid-template-rows: 1fr 1fr;
       column-gap: 1.8rem;
-
-      h3,
-      strong {
-        color: vars.$bluecity-blue;
-      }
 
       .left-pane {
         padding: vars.$lg-dist;
         background-color: vars.$whitesmoke;
         grid-column: 1 / 2;
-        grid-row: 1 / 3;
       }
 
       .right-pane {
         grid-column: 2 / 3;
-        grid-row: 1 / 3;
         margin-bottom: 0 !important;
 
         img {
           max-width: 100%;
           height: 100%;
           object-fit: cover;
-        }
-      }
-
-      .btn-list {
-        .btn {
-          display: block;
-          text-decoration: none;
-          padding: 0.6rem;
-          margin-top: 0.6rem;
-          border-radius: 0.25rem;
-          padding-left: 1.2rem !important;
-
-          .btn-icon {
-            margin-right: 0.3rem;
-          }
-        }
-
-        .btn-bluecity {
-          background-color: vars.$bluecity-blue;
-          color: vars.$white-text;
-        }
-
-        .btn-bluecity:hover {
-          background-color: vars.$bluecity-blue-dark;
         }
       }
     }
