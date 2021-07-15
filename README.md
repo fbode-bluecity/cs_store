@@ -46,3 +46,7 @@
 - `terser module.js --output module.min.js`: Removes as many extra characters as possible, the writes the entire script on a sinle line.
 
 ## Project specific
+
+# square buttons
+
+- https://spin.atomicobject.com/2015/07/14/css-responsive-square/
